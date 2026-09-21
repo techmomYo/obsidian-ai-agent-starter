@@ -146,7 +146,7 @@ contains `_index.md` as its entry point.
 |----------|-----------|
 | `AGENTS.md` as primary instruction file | Works across AI coding tools, not tool-specific |
 | `CLAUDE.md` and `GEMINI.md` only point to `AGENTS.md` | One source of instructions, no drift |
-| Six-layer trust model | Explicit write permissions per layer — prevents silent overwrites |
+| Six-layer trust model | Explicit write rules per layer, stated once in `AGENTS.md` |
 | `wiki/` read-only by default | Verified knowledge must not be overwritten speculatively |
 | `system/hot.md` as session cache | No persistent memory between sessions — cache restores context cheaply |
 | `_index.md` as folder entry point | Tool-agnostic, Obsidian-compatible, agent-readable |

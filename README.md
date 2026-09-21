@@ -1,11 +1,10 @@
 <!-- README.md — human-facing overview, quickstart, and replace checklist for the starter -->
 # obsidian-ai-agent-starter
 
-A starter template for any Obsidian + AI agent project. It gives you a
-six-layer folder structure with a defined trust level per layer, so an
-agent knows where it may read, write, and promote material without
-asking. Copy it, open it in Obsidian, replace the marked values, and you
-have an agent-ready workspace.
+A template to start your own AI agent-based, Obsidian-enabled office
+project. It gives you a six-layer folder structure with a trust level per
+layer, and one `AGENTS.md` of rules for AI tools. Copy it, open it in
+Obsidian, and replace the marked values.
 
 Built with Claude Code. It is designed for other tools that read
 `AGENTS.md` (Cursor, GitHub Copilot, Gemini CLI), but that has not been
@@ -159,7 +158,7 @@ file contents and is gitignored. On Windows they need Git Bash. Delete the
   `.claude/hooks/hook.log`, or `.obsidian/workspace.json`. They are
   already in `.gitignore` — check it before your first commit.
 - Only `.env.example` goes to Git.
-- `~/.claude.json` holds OAuth tokens — never commit or share it.
+- Never commit API keys or tokens.
 
 ---
 
@@ -198,6 +197,10 @@ AI tools, and the technical claims were checked against the official Claude
 Code, Gemini CLI, and GitHub Copilot documentation. It is AI-generated
 content: check it against current documentation before you rely on it, and
 report errors as issues.
+
+Provided as is under the Apache License 2.0, without warranty. AI tools can
+make mistakes: review what they change, keep backups, and check any rule
+against the current documentation of the tool you use.
 
 Not affiliated with or endorsed by Anthropic, Google, GitHub, Cursor, or
 Obsidian. Product names are used only to say what the files work with.
