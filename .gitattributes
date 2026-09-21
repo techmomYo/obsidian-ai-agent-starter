@@ -1,0 +1,5 @@
+# .gitattributes — enforces LF line endings for all text files across all platforms
+* text=auto eol=lf
+
+# Shell scripts must always use LF — they will break with CRLF on Linux/Mac
+*.sh text eol=lf

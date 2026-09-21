@@ -1,0 +1,14 @@
+# .gitignore — keeps secrets, machine-specific config, and logs out of Git
+.env
+.claude/settings.local.json
+.claude/hooks/hook.log
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+CLAUDE.local.md
+.DS_Store
+Thumbs.db
+
+# Binary media — uncomment, or configure Git LFS, before the first binary commit
+# assets/raw/*.pdf
+# assets/raw/*.png
+# assets/raw/*.mp4

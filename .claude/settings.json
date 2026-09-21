@@ -1,0 +1,59 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(system/hot.md)",
+      "Edit(system/agent-log.md)",
+      "Edit(inputs/**)",
+      "Edit(process/**)",
+      "Edit(assets/raw/**)",
+      "Edit(assets/attachments/**)",
+      "Bash(git status)",
+      "Bash(git diff)",
+      "Bash(git log)",
+      "Bash(git config user.email)",
+      "Bash(git remote -v)",
+      "Bash(git check-ignore *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push)",
+      "Bash(git push origin *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Edit(.env)",
+      "Edit(.claude/settings.local.json)",
+      "Bash(git push --force*)",
+      "Bash(git push * --force*)",
+      "Bash(git push -f *)",
+      "Bash(git push * -f *)",
+      "Bash(git push * -f)",
+      "Bash(git commit --no-verify*)",
+      "Bash(git commit * --no-verify*)",
+      "Bash(rm -rf *)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/pre-tool-check.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/post-edit-format.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
